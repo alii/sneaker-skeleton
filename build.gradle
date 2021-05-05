@@ -20,6 +20,8 @@ dependencies {
     shaded 'com.google.code.gson:gson:+'
     shaded 'org.projectlombok:lombok:+'
     shaded 'com.diogonunes:JColor:+'
+    shaded 'io.smallrye.reactive:mutiny:+'
+    shaded 'io.smallrye.reactive:smallrye-mutiny-vertx-core:+'
 
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
