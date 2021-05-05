@@ -1,10 +1,33 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'me.alii'
+version '1.0'
 
 repositories {
     mavenCentral()
+    jcenter()
+}
+
+configurations {
+    shaded
+
+    compile.extendsFrom shaded
+}
+
+dependencies {
+    shaded 'com.google.code.gson:gson:+'
+    shaded 'org.projectlombok:lombok:+'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+shadowJar {
+    configurations = [project.configurations.shaded]
+}
+
+build {
+    dependsOn shadowJar
 }

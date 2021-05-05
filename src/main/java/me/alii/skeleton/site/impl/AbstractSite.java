@@ -1,8 +1,13 @@
-package bot;
+package me.alii.skeleton.site.impl;
+
+import lombok.Getter;
+import me.alii.skeleton.product.GenericProduct;
+import me.alii.skeleton.site.Site;
 
 import java.util.HashMap;
 
-public abstract class AbstractSite {
+@Getter
+public abstract class AbstractSite implements Site {
     protected final String name;
     protected final HashMap<String, GenericProduct> cartCache;
 
@@ -11,10 +16,8 @@ public abstract class AbstractSite {
         this.cartCache = new HashMap<>();
     }
 
-    public String getName() {
-        return name;
-    }
 
     abstract void start();
+
     abstract void cartItem(GenericProduct... items);
 }
