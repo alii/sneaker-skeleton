@@ -13,7 +13,7 @@ public class TestSite extends AbstractSite {
 
     @Override
     public void start() {
-
+        this.logger.info("Hi");
     }
 
     @Override

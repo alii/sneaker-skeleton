@@ -13,13 +13,13 @@ repositories {
 
 configurations {
     shaded
-
     compile.extendsFrom shaded
 }
 
 dependencies {
     shaded 'com.google.code.gson:gson:+'
     shaded 'org.projectlombok:lombok:+'
+    shaded 'com.diogonunes:JColor:+'
 
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
