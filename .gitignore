@@ -2,4 +2,4 @@ target
 .gradle
 build
 .idea
-wrapper
+gradle

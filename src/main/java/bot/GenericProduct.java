@@ -7,13 +7,15 @@ import java.io.Serializable;
 public abstract class GenericProduct implements Serializable {
 
     @Nullable
-    public String image;
-    public String name;
-    public String id;
-    public int price;
+    private String image;
+    private String name;
+    private String id;
+    private int price;
 
-    public GenericProduct(String name) {
-        this.name = name;
+    public GenericProduct() {}
+
+    public GenericProduct(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -22,5 +24,29 @@ public abstract class GenericProduct implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
