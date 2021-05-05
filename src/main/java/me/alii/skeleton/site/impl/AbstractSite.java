@@ -15,9 +15,4 @@ public abstract class AbstractSite implements Site {
         this.name = name;
         this.cartCache = new HashMap<>();
     }
-
-
-    abstract void start();
-
-    abstract void cartItem(GenericProduct... items);
 }
