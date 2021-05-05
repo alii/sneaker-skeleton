@@ -9,12 +9,9 @@ import java.util.HashMap;
 @Getter
 public abstract class AbstractSite implements Site {
     protected final String name;
-    protected final HashMap<String, GenericProduct> cartCache;
-    protected final SiteLogger logger;
+    protected final HashMap<String, GenericProduct> cartCache = new HashMap<>();
 
     protected AbstractSite(String name) {
         this.name = name;
-        this.cartCache = new HashMap<>();
-        this.logger = new SiteLogger();
     }
 }

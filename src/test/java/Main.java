@@ -24,6 +24,8 @@ public class Main {
         final Site site = new TestSite();
         site.cartItem(product);
 
+        site.start();
+
         System.out.println(site.getName());
     }
 

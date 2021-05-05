@@ -1,5 +1,6 @@
 import me.alii.skeleton.product.GenericProduct;
 import me.alii.skeleton.site.impl.AbstractSite;
+import me.alii.skeleton.utils.Logger;
 
 /**
  * @author Brennan
@@ -13,7 +14,7 @@ public class TestSite extends AbstractSite {
 
     @Override
     public void start() {
-        this.logger.info("Hi");
+        Logger.info("test");
     }
 
     @Override
