@@ -11,9 +11,9 @@ import java.util.Date;
  * @since 05/05/2021
  **/
 public class Logger {
-
     private static String timestamp() {
-        return new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()) + " ";
+        String time = new SimpleDateFormat("[HH:mm:ss]").format(new Date());
+        return Ansi.colorize(time, Attribute.BOLD()) + " ";
     }
 
     public static void warning(String message) {
